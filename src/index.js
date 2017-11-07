@@ -1,16 +1,29 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+//We've created an individual square of the board and it will be a button
 class Square extends React.Component {
+  constructor(props) {
+    super(props); //super needs to be called when defining the constructor of a subclass
+    this.state = {
+      value: null
+    };
+  }
   render() {
     return (
-      <button className="square">
-        {/* TODO */}
+      <button className="square" onClick={() => //Arrow function syntax, helps define a function (shorter functions). The function being passed here is as onClick prop
+      alert('click')}>
+        {this.props.value}
       </button>
     );
   }
 }
 
+//This is the board and it calls on the individual buttons, as well as renders them into a grid-like board
 class Board extends React.Component {
   renderSquare(i) {
-    return <Square />;
+    return <Square value={i} />; //value is a prop
   }
 
   render() {
@@ -39,6 +52,7 @@ class Board extends React.Component {
   }
 }
 
+//This class includes code that allows us to play a game composed of the board, which is composed of the individual squares
 class Game extends React.Component {
   render() {
     return (
