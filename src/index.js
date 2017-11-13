@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// import './index.html';
 
 
 //We've created an individual square of the board and it will be a button
