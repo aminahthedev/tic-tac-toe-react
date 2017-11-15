@@ -9,7 +9,7 @@ ol, ul {
 }
 
 button:not(.square) {
-  height: 30px;
+  height: 16px;
   background-color: #EFB08F;
   border: none;
   border-radius: 2px;
@@ -58,4 +58,28 @@ button:not(.square) {
 
 .game-info {
   margin-left: 20px;
+}
+
+/*-----MOBILE RESPONSIVE-----*/
+@media only screen and (max-width: 486px) {
+  body {
+    font: 15px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+    background-color: #B75066;
+  }
+
+  .square {
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid #000;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 70px;
+    height: 70px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 70px;
+  }
 }
